@@ -1,0 +1,28 @@
+{
+  "name": "websocketsamples",
+  "version": "0.1.0",
+  "description": "samples using websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ar-to/websocketsamples.git"
+  },
+  "keywords": [
+    "websockets",
+    "express",
+    "html"
+  ],
+  "author": "ar-to",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ar-to/websocketsamples/issues"
+  },
+  "homepage": "https://github.com/ar-to/websocketsamples#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ws": "^5.1.1"
+  }
+}
