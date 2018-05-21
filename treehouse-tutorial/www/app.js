@@ -29,6 +29,7 @@ window.onload = function () {
     initWebsocket: function () {
       return setTimeout(function () {
         socket = new WebSocket('ws://echo.websocket.org');
+        // socket = new WebSocket('ws://localhost:8080');
         App.error();
         App.message();
         App.close();

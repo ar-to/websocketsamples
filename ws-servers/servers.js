@@ -35,3 +35,26 @@ wss2.on('connection', function connection(ws) {
 
   ws.send('server2 websocket connected');
 });
+
+const wss3 = new WebSocket.Server({ port: 8082 });
+
+wss3.on('connection', function connection(ws) {
+  ws.on('message', function incoming(message) {
+    console.log('received2: %s', message);
+    // ws.send(`Websocket Server2 sends: ${message}`)
+  });
+  ws.send('server2 websocket connected');
+
+  setTimeout(function timeout() {
+    // ws.send(Date.now());
+    // wss2.send('yep')
+    ws.send(`Websocket Server2 sends: data once at ${Date.now()}`)
+  }, 1000);
+
+  setInterval(
+    // () => ws.send(`${new Date()}`),
+    // () => ws.send(`something`),
+    () => ws.send(`Websocket Server2 sends: new data at date ${Date.now()}`),
+    1000
+  )
+});
