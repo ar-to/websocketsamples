@@ -90,3 +90,7 @@ This example sets up websocket servers by endpoint using the `express-ws` npm pa
 
 `ws://localhost:3000` - you can connect to this websocket server and get some basic data
 `ws://localhost:3000/echo` - you can connect to this websocket server and get some basic data with a setTimeout() of 1 second.
+
+## Client
+
+The client connects to a provided websocket server url. Useful for testing connections without having to use the browser.

@@ -29,10 +29,11 @@ app.ws('/echo', function(ws, req) {
   ws.on('message', function(msg) {
     ws.send(`Received request for /echo: ${msg}`);
   })
-  setTimeout(function timeout() {
+  // setTimeout(function timeout() {
+  setInterval(function timeout() {
     // ws.send(Date.now());
-    wss2.send(`server sends message at date ${Date.now()}`)
-  }, 1000);
+    ws.send(`server sends message at date ${Date.now()}`)
+  }, 3000);
   console.log('/echo socket', req.method);
 })
  
